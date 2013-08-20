@@ -4,8 +4,15 @@
 
 .status {
 	border-bottom: 1px solid #CCC;
-	paqddig: 5px 0;
+	padding: 5px 0;
+}
+
+.status p {
 	margin: 4px 0;
+}
+
+.status.hover {
+	background: #FAFAFA;
 }
 
 .status .admin {
