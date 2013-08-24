@@ -10,12 +10,17 @@ class User < ActiveRecord::Base
                   :first_name, :last_name, :profile_name
   # attr_accessible :title, :body
 
-  validades :first_name, presence: true
+  validates :first_name, presence: true
 
-  validades :last_name, presence: true
+  validates :last_name, presence: true
 
-  validades :profile_name, presence: true,
-                           uniqueness: true
+  validates :profile_name, 
+            presence: true,
+            uniqueness: true,
+            format: {
+              with: /a-zA-Z0-9_-/,
+              message: 'Must be formatted correctaly'
+            }
 
   has_many :statuses
 
