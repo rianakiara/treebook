@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
                 presence: true,
                 uniqueness: false,
                 format: {
-                    with: /a-zA-Z0-9_-/,
+                    with: /^[a-zA-Z0-9_-]+$/,
                     message: 'Must be formatted correctaly'
                 }
 
