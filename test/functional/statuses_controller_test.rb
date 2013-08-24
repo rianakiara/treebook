@@ -18,12 +18,20 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should render new page when logged in" do
-    sign_in(:yudi)
+    
     get :new
     assert_response :success
   end
 
-  test "should create status" do
+  test "should be logged in to post a new status" do
+    post :create, status: {content: "Hellow"}
+    assert_response :redirect
+    assert_redirected_to user_new_session_path
+  end
+
+  test "should create status when loogged in" do
+    sign_in(:yudi)
+    
     assert_difference('Status.count') do
       post :create, status: { content: @status.content}
     end
