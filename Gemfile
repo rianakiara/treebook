@@ -23,7 +23,9 @@ end
 
 gem 'jquery-rails'
 
-gem 'pg'
+group :production do
+	gem 'pg'
+end
 
 group :development, :test do
   gem 'sqlite3'

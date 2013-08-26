@@ -132,7 +132,6 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 3.2.14)
-  rake (~> 10.0.4)
   sass-rails (~> 3.2.3)
   simple_form
   sqlite3
