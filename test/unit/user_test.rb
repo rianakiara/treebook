@@ -39,7 +39,7 @@ class UserTest < ActiveSupport::TestCase
 					email: "ricardo.ianakiara@gmail.com" 
 				)
 		user.password = user.password_confirmation = "k2v8ptj21"
-		
+
 		user.profile_name = "my profile name with spaces"
 
 		assert !user.save
@@ -54,7 +54,7 @@ class UserTest < ActiveSupport::TestCase
 					email: "ricardo.ianakiara@gmail.com" 
 				)
 		user.password = user.password_confirmation = "k2v8ptj21"
-		user.profile_name = "yudi_0"
+		user.profile_name = "yudi"
 
 		assert user.valid?
 	end
