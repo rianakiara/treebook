@@ -2,6 +2,10 @@ yudi:
 	first_name:            "Ricardo"
 	last_name:             "Ianakiara"
 	email:                 "ricardo.ianakiara@gmail.com"
-	password:              "k2v8ptj21"
-	password_confirmation: "k2v8ptj21"
 	profile_name:          "yudi"
+
+	yudi:
+	first_name:            "Diogenes"
+	last_name:             "Buarque"
+	email:                 "diogenes@performanz.com"
+	profile_name:          "diogi"
