@@ -1,17 +1,13 @@
 source 'https://rubygems.org'
+ruby "1.9.3"
 
 gem 'rails', '3.2.14'
-
-gem 'rake', '~> 10.0.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'devise'
 gem 'simple_form'
 
-group :development, ;test do
-	gem 'sqlite3'
-end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,7 +23,10 @@ end
 
 gem 'jquery-rails'
 
-group :development do
+gem 'pg'
+
+group :development, :test do
+  gem 'sqlite3'
   gem "binding_of_caller"
   gem "better_errors"
 end
